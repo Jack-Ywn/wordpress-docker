@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## 使用[docker](https://hub.docker.com/repository/docker/jackywn/wordpress)部署
 
 ```shell
@@ -74,7 +73,3 @@ server {
     }
 }
 ```
-=======
-# wordpress-docker
-wordpress容器化
->>>>>>> 699ab20d8545d4eae67c7910b718c21b747870ea
