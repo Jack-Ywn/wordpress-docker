@@ -1,0 +1,26 @@
+services:
+#MariaDB Container
+  mariadb:
+    image: mariadb:10.7
+    container_name: wordpress-db
+    hostname: wordpress-db   
+    volumes:
+      - /data/wordpress/mariadb:/var/lib/mysql
+    env_file:
+      - ./mariadb.env
+    restart: always
+#wordpress Container
+  itop:
+    image: jackywn/wordpress
+    container_name : wordpress-www
+    hostname: wordpress-www
+    ports:
+      - "8080:80"
+    volumes:
+      - /data/wordpress/www:/var/www/html/wordpress
+      #Apache2和PHP需要git clone https://github.com/Jack-Ywn/wordpress-docker.git      
+      #- ./etc/php:/etc/php
+      #- ./etc/apache2:/etc/apache2
+    environment:
+      - TIMEZONE=Asia/Shanghai      
+    restart: always
