@@ -33,7 +33,7 @@ docker-compose up -d
 git clone https://github.com/Jack-Ywn/wordpress-docker.git
 cd wordpress-docker
 mkdir /data
-tar xf wordpress.tar.gz -C /data
+tar xf wordpress.tar.gz
 docker-compose up -d
 
 #访问http://ip:8000即可初始化安装wordpress
