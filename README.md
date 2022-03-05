@@ -32,7 +32,6 @@ docker-compose up -d
 #直接使用已经初始化好数据（由于网络原因导致容器无法下载wordpress源码的）
 git clone https://github.com/Jack-Ywn/wordpress-docker.git
 cd wordpress-docker
-mkdir /data
 tar xf wordpress.tar.gz
 docker-compose up -d
 
