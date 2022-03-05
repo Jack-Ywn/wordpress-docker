@@ -23,6 +23,4 @@ chown -R www-data:www-data /var/www/html/wordpress
 echo -e "<VirtualHost *:80>\n\tDocumentRoot /var/www/html/wordpress\n\n\t<Directory /var/www/html/wordpress>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-wordpress.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/access-wordpress.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
 #启动服务
-service php7.4-fpm start
 service apache2 start
-
