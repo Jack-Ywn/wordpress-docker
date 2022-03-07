@@ -15,7 +15,7 @@ docker run \
 
 #运行wordpress容器并且链接数据库
 docker run \
---name wordpress-www\
+--name wordpress-www \
 --hostname wordpress-www \
 --link wordpress-db:wordpress-db \
 -v /data/wordpress/html:/var/www/html/wordpress \
