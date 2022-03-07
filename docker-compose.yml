@@ -9,7 +9,7 @@ services:
     env_file:
       - ./mariadb.env
     restart: always
-#wordpress Container
+#Wordpress Container
   itop:
     image: jackywn/wordpress
     container_name : wordpress-www
@@ -17,7 +17,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./wordpress/html:/var/www/html/wordpress
+      - ./wordpress/www:/var/www/html/wordpress
       #Apache2和PHP需要git clone https://github.com/Jack-Ywn/wordpress-docker.git      
       #- ./etc/php:/etc/php
       #- ./etc/apache2:/etc/apache2
