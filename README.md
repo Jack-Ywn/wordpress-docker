@@ -18,7 +18,7 @@ docker run \
 --name wordpress-www \
 --hostname wordpress-www \
 --link wordpress-db:wordpress-db \
--v /data/wordpress/html:/var/www/html/wordpress \
+-v /data/wordpress/www:/var/www/html/wordpress \
 -p 8000:80 \
 -e TIMEZONE="Asia/Shanghai" \
 -d jackywn/wordpress
