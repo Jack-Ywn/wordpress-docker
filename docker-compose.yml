@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./wordpress/www:/var/www/html/wordpress
+      - ./wordpress/html:/var/www/html/wordpress
       #Apache2和PHP需要git clone https://github.com/Jack-Ywn/wordpress-docker.git      
       #- ./etc/php:/etc/php
       #- ./etc/apache2:/etc/apache2
