@@ -15,7 +15,7 @@ services:
     container_name : wordpress-www
     hostname: wordpress-www
     ports:
-      - "8080:80"
+      - "8000:80"
     volumes:
       - ./wordpress/html:/var/www/html/wordpress
       #Apache2和PHP需要git clone https://github.com/Jack-Ywn/wordpress-docker.git      
