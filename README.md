@@ -2,23 +2,26 @@
 
 ```shell
 #创建带有卷的MariaDB容器
-docker run --name -d wordpress-db \
+docker run \
+--name wordpress-db \
 --hostname wordpress-db \
 -e MARIADB_ROOT_PASSWORD="abc123%%" \
 -e MARIADB_DATABASE="wordpress" \
 -e MARIADB_USER="wordpress" \
 -e MARIADB_PASSWORD="wordpress" \
---volume /data/wordpress/mariadb:/var/lib/mysql  
-mariadb:10.7
+-v /data/wordpress/mariadb:/var/lib/mysql \
+-d mariadb:10.7
+
 
 #运行wordpress容器并且链接数据库
-docker run --name -d wordpress-www \
---hostname wordpress-www \ 
+docker run \
+--name wordpress-www\
+--hostname wordpress-www \
 --link wordpress-db:wordpress-db \
---volume /data/wordpress/html:/var/www/html/wordpress \ 
---env " TIMEZONE=Asia/Shanghai " \
--p 8000:80
-jackywn/wordpress
+-v /data/wordpress/html:/var/www/html/wordpress \
+-p 8000:80 \
+-e TIMEZONE="Asia/Shanghai" \
+-d jackywn/wordpress
 ```
 
 ## 使用docker-compose部署
