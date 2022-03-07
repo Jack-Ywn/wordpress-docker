@@ -4,10 +4,10 @@
 #创建带有卷的MariaDB容器
 docker run --name -d wordpress-db \
 --hostname wordpress-db \
--e MARIADB_ROOT_PASSWORD=abc123%% \
--e MARIADB_DATABASE=wordpress \
--e MARIADB_USER=wordpress\
--e MARIADB_PASSWORD=wordpress \
+-e MARIADB_ROOT_PASSWORD="abc123%%" \
+-e MARIADB_DATABASE="wordpress" \
+-e MARIADB_USER="wordpress" \
+-e MARIADB_PASSWORD="wordpress" \
 --volume /data/wordpress/mariadb:/var/lib/mysql  
 mariadb:10.7
 
