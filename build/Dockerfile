@@ -7,7 +7,7 @@ COPY sources.list /etc/apt/
 #apt-get安装期间不询问任何问题/对话框
 ENV DEBIAN_FRONTEND noninteractive
 
-#安装Apache、PHP8.0、PHP拓展
+#安装Apache、PHP、PHP拓展
 RUN apt update \
 && apt install --yes --no-install-recommends \
 apache2 vim wget \
